@@ -3,10 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<!--dodati meta tag bitan za stranicu-->
-		<!--dodati link za css dokumente -->
-		<title>Primjer HTML5 stranice</title> <!--promijeniti odgovarajući tekst na stranici
-		ovo je samo predložak-->
+		<title>Primjer HTML5 stranice</title> 
         <link rel="stylesheet" href="styles/style.css">
         <link rel="stylesheet" href="styles/style_slike.css">
 	</head>
@@ -14,13 +11,6 @@
 		<header>
 		<h1>Dobrodosli na moju web stranicu</h1>
 		</header>
-		<!-- <header>
-       <nav aria-labelledby="primarna-navigacija">
-        <h2 id="primarna-navigacija">Primarna navigacija</h2>
-        
-        </nav>
-        </header>
-    -->
     <div class="navigation">
 		<ul>
 			<li><a href="/">Pocetna</a></li>
@@ -47,7 +37,7 @@
     <% images.forEach(image => { %>
         <figure class="galerija_slika">
         <a href="#lightbox<%= image.id %>"">
-            <img src="<%= image.url %>" alt="<%= image.title %>">
+            <img src="<%= image.url %>" alt="<%= image.title %>" loading="lazy">
         </a>
         <figcaption><%= image.title %></figcaption>
         </figure>
